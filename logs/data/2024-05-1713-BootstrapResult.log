@@ -1,0 +1,1 @@
+2024-05-17 13:01:37.164552513 Info [{"credential.profile":[{"community":"public","credential.name":"Switch s1","credential.profile.id":1,"protocol":"snmp","version":"2c"}],"error":"[]","ip":"172.16.8.2","name":"Switch s1","plugin.type":"Discover","port":161,"result":{"system_name":"cisco_core.motadata.local"},"retry.count":5,"status":"Success"}]

@@ -1,0 +1,66 @@
+<configuration>
+    <!-- Console Appender -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>[%d{yyyy-MM-dd HH:mm:ss.SSS}] [%-5level] [%thread] %msg%n</pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>INFO</level>
+        </filter>
+    </appender>
+
+    <appender name="bootstrap" class="ch.qos.logback.core.FileAppender">
+        <file>/home/vaibhav/IdeaProjects/NMS-Lite/src/main/java/com/motadata/logs/Bootstrap.log</file>
+        <encoder>
+            <pattern>[%d{yyyy-MM-dd HH:mm:ss.SSS}] [%thread] [%-5level] [%file:%line] %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="server" class="ch.qos.logback.core.FileAppender">
+        <file>/home/vaibhav/IdeaProjects/NMS-Lite/src/main/java/com/motadata/logs/APIServer.log</file>
+        <encoder>
+            <pattern>[%d{yyyy-MM-dd HH:mm:ss.SSS}] [%thread] [%-5level] [%file:%line] %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="credential" class="ch.qos.logback.core.FileAppender">
+        <file>/home/vaibhav/IdeaProjects/NMS-Lite/src/main/java/com/motadata/logs/Credential.log</file>
+        <encoder>
+            <pattern>[%d{yyyy-MM-dd HH:mm:ss.SSS}][%thread] [%-5level] [%file:%line] %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="discovery" class="ch.qos.logback.core.FileAppender">
+        <file>/home/vaibhav/IdeaProjects/NMS-Lite/src/main/java/com/motadata/logs/Discovery.log</file>
+        <encoder>
+            <pattern>[%d{yyyy-MM-dd HH:mm:ss.SSS}] [%thread] [%-5level] [%file:%line] %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="provision" class="ch.qos.logback.core.FileAppender">
+        <file>/home/vaibhav/IdeaProjects/NMS-Lite/src/main/java/com/motadata/logs/Provision.log</file>
+        <encoder>
+            <pattern>[%d{yyyy-MM-dd HH:mm:ss.SSS}] [%thread]  [%-5level] [%file:%line] %msg%n</pattern>
+        </encoder>
+    </appender>
+
+
+    <!-- Root Logger -->
+    <root level="debug">
+        <appender-ref ref="STDOUT"/>
+    </root>
+
+    <!-- Logger for Server -->
+    <logger name="com.motadata.server.ApiServer" level="trace" additivity="false">
+        <appender-ref ref="server"/>
+    </logger>
+
+    <!-- Logger for Credential  -->
+    <logger name="com.motadata.profiles.CredentialProfile" level="trace" additivity="false">
+        <appender-ref ref="credential"/>
+    </logger>
+
+    <logger name="com.motadata.Bootstrap" level="trace" additivity="false">
+        <appender-ref ref="bootstrap"/>
+    </logger>
+</configuration>

@@ -1,0 +1,602 @@
+[2024-05-17 11:39:01.056] [vert.x-eventloop-thread-0] [INFO ] [ApiServer.java:504] Server started on port 8080
+[2024-05-17 11:40:48.252] [vert.x-eventloop-thread-0] [INFO ] [ApiServer.java:504] Server started on port 8080
+[2024-05-17 11:42:35.622] [vert.x-eventloop-thread-0] [INFO ] [ApiServer.java:504] Server started on port 8080
+[2024-05-17 11:42:57.724] [vert.x-eventloop-thread-0] [INFO ] [ApiServer.java:504] Server started on port 8080
+[2024-05-17 11:44:27.722] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:63] Received request: /credential-profile/
+[2024-05-17 11:45:19.766] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:124] Received request: /credential-profile/
+[2024-05-17 11:46:01.433] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:153] Received request: /credential-profile/1
+[2024-05-17 11:46:06.582] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:124] Received request: /credential-profile/
+[2024-05-17 11:46:24.005] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:92] Received request: /credential-profile/1
+[2024-05-17 11:46:30.283] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:92] Received request: /credential-profile/2
+[2024-05-17 11:46:37.256] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:92] Received request: /credential-profile/1
+[2024-05-17 11:47:18.637] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:221] Received request: /discovery-profile/
+[2024-05-17 11:47:18.642] [vert.x-eventloop-thread-0] [ERROR] [ApiServer.java:269] Error creating credential profile:
+java.lang.NullPointerException: Cannot invoke "io.vertx.core.json.JsonArray.iterator()" because "credProfileIds" is null
+	at com.motadata.server.ApiServer.lambda$start$8(ApiServer.java:232)
+	at io.vertx.core.impl.future.FutureImpl$1.onSuccess(FutureImpl.java:91)
+	at io.vertx.core.impl.future.FutureBase.lambda$emitSuccess$0(FutureBase.java:60)
+	at io.vertx.core.impl.ContextImpl.execute(ContextImpl.java:298)
+	at io.vertx.core.impl.DuplicatedContext.execute(DuplicatedContext.java:171)
+	at io.vertx.core.impl.future.FutureBase.emitSuccess(FutureBase.java:57)
+	at io.vertx.core.impl.future.FutureImpl.tryComplete(FutureImpl.java:259)
+	at io.vertx.core.http.impl.HttpEventHandler.handleEnd(HttpEventHandler.java:79)
+	at io.vertx.core.http.impl.Http1xServerRequest.onEnd(Http1xServerRequest.java:596)
+	at io.vertx.core.http.impl.Http1xServerRequest.handleEnd(Http1xServerRequest.java:579)
+	at io.vertx.core.impl.ContextImpl.execute(ContextImpl.java:313)
+	at io.vertx.core.impl.DuplicatedContext.execute(DuplicatedContext.java:161)
+	at io.vertx.core.http.impl.Http1xServerConnection.onEnd(Http1xServerConnection.java:221)
+	at io.vertx.core.http.impl.Http1xServerConnection.onContent(Http1xServerConnection.java:209)
+	at io.vertx.core.http.impl.Http1xServerConnection.handleOther(Http1xServerConnection.java:189)
+	at io.vertx.core.http.impl.Http1xServerConnection.handleMessage(Http1xServerConnection.java:176)
+	at io.vertx.core.net.impl.ConnectionBase.read(ConnectionBase.java:159)
+	at io.vertx.core.net.impl.VertxHandler.channelRead(VertxHandler.java:153)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelRead(ChannelInboundHandlerAdapter.java:93)
+	at io.netty.handler.codec.http.websocketx.extensions.WebSocketServerExtensionHandler.channelRead(WebSocketServerExtensionHandler.java:88)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+[2024-05-17 11:50:23.185] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:221] Received request: /discovery-profile/
+[2024-05-17 11:51:01.553] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:278] Received request: /discovery-profile/
+[2024-05-17 11:52:55.908] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:221] Received request: /discovery-profile/
+[2024-05-17 11:53:04.206] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:278] Received request: /discovery-profile/
+[2024-05-17 11:53:32.103] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:307] Received request: /discovery-profile/1
+[2024-05-17 11:53:38.759] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:307] Received request: /discovery-profile/2
+[2024-05-17 11:53:44.613] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:307] Received request: /discovery-profile/3
+[2024-05-17 11:54:29.317] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:340] Received request: /discovery-profile/2
+[2024-05-17 11:54:29.318] [vert.x-eventloop-thread-0] [ERROR] [ApiServer.java:391] Error creating credential profile:
+io.vertx.core.json.DecodeException: Failed to decode:Unexpected character ('}' (code 125)): was expecting double-quote to start field name
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 14, column: 2]
+	at io.vertx.core.json.jackson.DatabindCodec.fromParser(DatabindCodec.java:128)
+	at io.vertx.core.json.jackson.DatabindCodec.fromBuffer(DatabindCodec.java:98)
+	at io.vertx.core.json.JsonObject.fromBuffer(JsonObject.java:1254)
+	at io.vertx.core.json.JsonObject.<init>(JsonObject.java:85)
+	at io.vertx.core.buffer.impl.BufferImpl.toJsonObject(BufferImpl.java:110)
+	at com.motadata.server.ApiServer.lambda$start$12(ApiServer.java:344)
+	at io.vertx.core.impl.future.FutureImpl$1.onSuccess(FutureImpl.java:91)
+	at io.vertx.core.impl.future.FutureBase.lambda$emitSuccess$0(FutureBase.java:60)
+	at io.vertx.core.impl.ContextImpl.execute(ContextImpl.java:298)
+	at io.vertx.core.impl.DuplicatedContext.execute(DuplicatedContext.java:171)
+	at io.vertx.core.impl.future.FutureBase.emitSuccess(FutureBase.java:57)
+	at io.vertx.core.impl.future.FutureImpl.tryComplete(FutureImpl.java:259)
+	at io.vertx.core.http.impl.HttpEventHandler.handleEnd(HttpEventHandler.java:79)
+	at io.vertx.core.http.impl.Http1xServerRequest.onEnd(Http1xServerRequest.java:596)
+	at io.vertx.core.http.impl.Http1xServerRequest.handleEnd(Http1xServerRequest.java:579)
+	at io.vertx.core.impl.ContextImpl.execute(ContextImpl.java:313)
+	at io.vertx.core.impl.DuplicatedContext.execute(DuplicatedContext.java:161)
+	at io.vertx.core.http.impl.Http1xServerConnection.onEnd(Http1xServerConnection.java:221)
+	at io.vertx.core.http.impl.Http1xServerConnection.onContent(Http1xServerConnection.java:209)
+	at io.vertx.core.http.impl.Http1xServerConnection.handleOther(Http1xServerConnection.java:189)
+	at io.vertx.core.http.impl.Http1xServerConnection.handleMessage(Http1xServerConnection.java:176)
+	at io.vertx.core.net.impl.ConnectionBase.read(ConnectionBase.java:159)
+	at io.vertx.core.net.impl.VertxHandler.channelRead(VertxHandler.java:153)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelRead(ChannelInboundHandlerAdapter.java:93)
+	at io.netty.handler.codec.http.websocketx.extensions.WebSocketServerExtensionHandler.channelRead(WebSocketServerExtensionHandler.java:88)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character ('}' (code 125)): was expecting double-quote to start field name
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 14, column: 2]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:2481)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:752)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:676)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._handleOddName(UTF8StreamJsonParser.java:2147)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._parseName(UTF8StreamJsonParser.java:1797)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextFieldName(UTF8StreamJsonParser.java:1084)
+	at com.fasterxml.jackson.databind.deser.std.MapDeserializer._readAndBindStringKeyMap(MapDeserializer.java:594)
+	at com.fasterxml.jackson.databind.deser.std.MapDeserializer.deserialize(MapDeserializer.java:437)
+	at com.fasterxml.jackson.databind.deser.std.MapDeserializer.deserialize(MapDeserializer.java:32)
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323)
+	at com.fasterxml.jackson.databind.ObjectMapper._readValue(ObjectMapper.java:4650)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2831)
+	at io.vertx.core.json.jackson.DatabindCodec.fromParser(DatabindCodec.java:125)
+	... 48 common frames omitted
+[2024-05-17 11:54:38.646] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:340] Received request: /discovery-profile/2
+[2024-05-17 11:55:54.477] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:307] Received request: /discovery-profile/2
+[2024-05-17 11:57:43.752] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:431] Received request: /run-discovery/2
+[2024-05-17 12:15:26.891] [vert.x-eventloop-thread-0] [INFO ] [ApiServer.java:504] Server started on port 8080
+[2024-05-17 12:15:42.819] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:63] Received request: /credential-profile/
+[2024-05-17 12:15:51.190] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:221] Received request: /discovery-profile/
+[2024-05-17 12:16:01.243] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:278] Received request: /discovery-profile/
+[2024-05-17 12:16:10.046] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:431] Received request: /run-discovery/1
+[2024-05-17 12:17:13.967] [vert.x-eventloop-thread-0] [INFO ] [ApiServer.java:506] Server started on port 8080
+[2024-05-17 12:17:20.155] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:63] Received request: /credential-profile/
+[2024-05-17 12:17:25.365] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:221] Received request: /discovery-profile/
+[2024-05-17 12:17:30.329] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:431] Received request: /run-discovery/1
+[2024-05-17 12:20:05.360] [vert.x-eventloop-thread-0] [INFO ] [ApiServer.java:506] Server started on port 8080
+[2024-05-17 12:22:17.682] [vert.x-eventloop-thread-0] [INFO ] [ApiServer.java:508] Server started on port 8080
+[2024-05-17 12:22:32.735] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:63] Received request: /credential-profile/
+[2024-05-17 12:22:48.698] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:221] Received request: /discovery-profile/
+[2024-05-17 12:23:12.660] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:431] Received request: /run-discovery/1
+[2024-05-17 12:24:53.590] [vert.x-eventloop-thread-0] [INFO ] [ApiServer.java:512] Server started on port 8080
+[2024-05-17 12:25:00.043] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:63] Received request: /credential-profile/
+[2024-05-17 12:25:03.840] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:221] Received request: /discovery-profile/
+[2024-05-17 12:25:07.932] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:431] Received request: /run-discovery/1
+[2024-05-17 12:30:11.372] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:278] Received request: /discovery-profile/
+[2024-05-17 12:33:40.783] [vert.x-eventloop-thread-0] [INFO ] [ApiServer.java:502] Server started on port 8080
+[2024-05-17 12:33:52.944] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:63] Received request: /credential-profile/
+[2024-05-17 12:33:57.634] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:221] Received request: /discovery-profile/
+[2024-05-17 12:34:02.894] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:431] Received request: /run-discovery/1
+[2024-05-17 12:34:02.987] [vert.x-eventloop-thread-0] [INFO ] [ApiServer.java:450] PING Check Successful 172.16.8.2 is alive.
+[2024-05-17 12:34:03.002] [vert.x-eventloop-thread-0] [ERROR] [ApiServer.java:491] Error during discovery process:
+io.vertx.core.json.DecodeException: Failed to decode:No content to map due to end-of-input
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1]
+	at io.vertx.core.json.jackson.DatabindCodec.fromParser(DatabindCodec.java:128)
+	at io.vertx.core.json.jackson.DatabindCodec.fromString(DatabindCodec.java:89)
+	at io.vertx.core.json.JsonArray.fromJson(JsonArray.java:712)
+	at io.vertx.core.json.JsonArray.<init>(JsonArray.java:55)
+	at com.motadata.server.ApiServer.lambda$start$15(ApiServer.java:472)
+	at io.vertx.ext.web.impl.RouteState.handleContext(RouteState.java:1285)
+	at io.vertx.ext.web.impl.RoutingContextImplBase.iterateNext(RoutingContextImplBase.java:177)
+	at io.vertx.ext.web.impl.RoutingContextImpl.next(RoutingContextImpl.java:137)
+	at io.vertx.ext.web.impl.RouterImpl.handle(RouterImpl.java:68)
+	at io.vertx.ext.web.impl.RouterImpl.handle(RouterImpl.java:37)
+	at io.vertx.core.http.impl.Http1xServerRequestHandler.handle(Http1xServerRequestHandler.java:67)
+	at io.vertx.core.http.impl.Http1xServerRequestHandler.handle(Http1xServerRequestHandler.java:30)
+	at io.vertx.core.impl.ContextImpl.emit(ContextImpl.java:328)
+	at io.vertx.core.impl.DuplicatedContext.emit(DuplicatedContext.java:166)
+	at io.vertx.core.http.impl.Http1xServerConnection.handleMessage(Http1xServerConnection.java:174)
+	at io.vertx.core.net.impl.ConnectionBase.read(ConnectionBase.java:159)
+	at io.vertx.core.net.impl.VertxHandler.channelRead(VertxHandler.java:153)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelRead(ChannelInboundHandlerAdapter.java:93)
+	at io.netty.handler.codec.http.websocketx.extensions.WebSocketServerExtensionHandler.onHttpRequestChannelRead(WebSocketServerExtensionHandler.java:160)
+	at io.netty.handler.codec.http.websocketx.extensions.WebSocketServerExtensionHandler.channelRead(WebSocketServerExtensionHandler.java:83)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: com.fasterxml.jackson.databind.exc.MismatchedInputException: No content to map due to end-of-input
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1]
+	at com.fasterxml.jackson.databind.exc.MismatchedInputException.from(MismatchedInputException.java:59)
+	at com.fasterxml.jackson.databind.ObjectMapper._initForReading(ObjectMapper.java:4765)
+	at com.fasterxml.jackson.databind.ObjectMapper._readValue(ObjectMapper.java:4642)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2831)
+	at io.vertx.core.json.jackson.DatabindCodec.fromParser(DatabindCodec.java:125)
+	... 43 common frames omitted
+[2024-05-17 12:36:28.737] [vert.x-eventloop-thread-0] [INFO ] [ApiServer.java:504] Server started on port 8080
+[2024-05-17 12:36:35.455] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:63] Received request: /credential-profile/
+[2024-05-17 12:36:40.013] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:221] Received request: /discovery-profile/
+[2024-05-17 12:37:00.046] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:278] Received request: /discovery-profile/
+[2024-05-17 12:37:05.196] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:431] Received request: /run-discovery/1
+[2024-05-17 12:37:05.205] [vert.x-eventloop-thread-0] [INFO ] [ApiServer.java:450] PING Check Successful 172.16.8.2 is alive.
+[2024-05-17 12:37:05.209] [vert.x-eventloop-thread-0] [ERROR] [ApiServer.java:493] Error during discovery process:
+io.vertx.core.json.DecodeException: Failed to decode:No content to map due to end-of-input
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1]
+	at io.vertx.core.json.jackson.DatabindCodec.fromParser(DatabindCodec.java:128)
+	at io.vertx.core.json.jackson.DatabindCodec.fromString(DatabindCodec.java:89)
+	at io.vertx.core.json.JsonArray.fromJson(JsonArray.java:712)
+	at io.vertx.core.json.JsonArray.<init>(JsonArray.java:55)
+	at com.motadata.server.ApiServer.lambda$start$15(ApiServer.java:474)
+	at io.vertx.ext.web.impl.RouteState.handleContext(RouteState.java:1285)
+	at io.vertx.ext.web.impl.RoutingContextImplBase.iterateNext(RoutingContextImplBase.java:177)
+	at io.vertx.ext.web.impl.RoutingContextImpl.next(RoutingContextImpl.java:137)
+	at io.vertx.ext.web.impl.RouterImpl.handle(RouterImpl.java:68)
+	at io.vertx.ext.web.impl.RouterImpl.handle(RouterImpl.java:37)
+	at io.vertx.core.http.impl.Http1xServerRequestHandler.handle(Http1xServerRequestHandler.java:67)
+	at io.vertx.core.http.impl.Http1xServerRequestHandler.handle(Http1xServerRequestHandler.java:30)
+	at io.vertx.core.impl.ContextImpl.emit(ContextImpl.java:328)
+	at io.vertx.core.impl.DuplicatedContext.emit(DuplicatedContext.java:166)
+	at io.vertx.core.http.impl.Http1xServerConnection.handleMessage(Http1xServerConnection.java:174)
+	at io.vertx.core.net.impl.ConnectionBase.read(ConnectionBase.java:159)
+	at io.vertx.core.net.impl.VertxHandler.channelRead(VertxHandler.java:153)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelRead(ChannelInboundHandlerAdapter.java:93)
+	at io.netty.handler.codec.http.websocketx.extensions.WebSocketServerExtensionHandler.onHttpRequestChannelRead(WebSocketServerExtensionHandler.java:160)
+	at io.netty.handler.codec.http.websocketx.extensions.WebSocketServerExtensionHandler.channelRead(WebSocketServerExtensionHandler.java:83)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: com.fasterxml.jackson.databind.exc.MismatchedInputException: No content to map due to end-of-input
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1]
+	at com.fasterxml.jackson.databind.exc.MismatchedInputException.from(MismatchedInputException.java:59)
+	at com.fasterxml.jackson.databind.ObjectMapper._initForReading(ObjectMapper.java:4765)
+	at com.fasterxml.jackson.databind.ObjectMapper._readValue(ObjectMapper.java:4642)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2831)
+	at io.vertx.core.json.jackson.DatabindCodec.fromParser(DatabindCodec.java:125)
+	... 43 common frames omitted
+[2024-05-17 12:42:27.147] [vert.x-eventloop-thread-0] [INFO ] [ApiServer.java:506] Server started on port 8080
+[2024-05-17 12:42:33.123] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:63] Received request: /credential-profile/
+[2024-05-17 12:42:37.612] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:221] Received request: /discovery-profile/
+[2024-05-17 12:42:41.748] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:278] Received request: /discovery-profile/
+[2024-05-17 12:42:45.875] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:431] Received request: /run-discovery/1
+[2024-05-17 12:42:45.886] [vert.x-eventloop-thread-0] [INFO ] [ApiServer.java:450] PING Check Successful 172.16.8.2 is alive.
+[2024-05-17 12:42:45.892] [vert.x-eventloop-thread-0] [ERROR] [ApiServer.java:495] Error during discovery process:
+io.vertx.core.json.DecodeException: Failed to decode:No content to map due to end-of-input
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1]
+	at io.vertx.core.json.jackson.DatabindCodec.fromParser(DatabindCodec.java:128)
+	at io.vertx.core.json.jackson.DatabindCodec.fromString(DatabindCodec.java:89)
+	at io.vertx.core.json.JsonArray.fromJson(JsonArray.java:712)
+	at io.vertx.core.json.JsonArray.<init>(JsonArray.java:55)
+	at com.motadata.server.ApiServer.lambda$start$15(ApiServer.java:476)
+	at io.vertx.ext.web.impl.RouteState.handleContext(RouteState.java:1285)
+	at io.vertx.ext.web.impl.RoutingContextImplBase.iterateNext(RoutingContextImplBase.java:177)
+	at io.vertx.ext.web.impl.RoutingContextImpl.next(RoutingContextImpl.java:137)
+	at io.vertx.ext.web.impl.RouterImpl.handle(RouterImpl.java:68)
+	at io.vertx.ext.web.impl.RouterImpl.handle(RouterImpl.java:37)
+	at io.vertx.core.http.impl.Http1xServerRequestHandler.handle(Http1xServerRequestHandler.java:67)
+	at io.vertx.core.http.impl.Http1xServerRequestHandler.handle(Http1xServerRequestHandler.java:30)
+	at io.vertx.core.impl.ContextImpl.emit(ContextImpl.java:328)
+	at io.vertx.core.impl.DuplicatedContext.emit(DuplicatedContext.java:166)
+	at io.vertx.core.http.impl.Http1xServerConnection.handleMessage(Http1xServerConnection.java:174)
+	at io.vertx.core.net.impl.ConnectionBase.read(ConnectionBase.java:159)
+	at io.vertx.core.net.impl.VertxHandler.channelRead(VertxHandler.java:153)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelRead(ChannelInboundHandlerAdapter.java:93)
+	at io.netty.handler.codec.http.websocketx.extensions.WebSocketServerExtensionHandler.onHttpRequestChannelRead(WebSocketServerExtensionHandler.java:160)
+	at io.netty.handler.codec.http.websocketx.extensions.WebSocketServerExtensionHandler.channelRead(WebSocketServerExtensionHandler.java:83)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: com.fasterxml.jackson.databind.exc.MismatchedInputException: No content to map due to end-of-input
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1]
+	at com.fasterxml.jackson.databind.exc.MismatchedInputException.from(MismatchedInputException.java:59)
+	at com.fasterxml.jackson.databind.ObjectMapper._initForReading(ObjectMapper.java:4765)
+	at com.fasterxml.jackson.databind.ObjectMapper._readValue(ObjectMapper.java:4642)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2831)
+	at io.vertx.core.json.jackson.DatabindCodec.fromParser(DatabindCodec.java:125)
+	... 43 common frames omitted
+[2024-05-17 12:45:47.325] [vert.x-eventloop-thread-0] [INFO ] [ApiServer.java:512] Server started on port 8080
+[2024-05-17 12:45:54.487] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:65] Received request: /credential-profile/
+[2024-05-17 12:45:57.686] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:223] Received request: /discovery-profile/
+[2024-05-17 12:46:02.647] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:433] Received request: /run-discovery/1
+[2024-05-17 12:46:02.670] [vert.x-eventloop-thread-0] [INFO ] [ApiServer.java:452] PING Check Successful 172.16.8.2 is alive.
+[2024-05-17 12:46:02.674] [vert.x-eventloop-thread-0] [ERROR] [ApiServer.java:501] Error during discovery process:
+io.vertx.core.json.DecodeException: Failed to decode:No content to map due to end-of-input
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1]
+	at io.vertx.core.json.jackson.DatabindCodec.fromParser(DatabindCodec.java:128)
+	at io.vertx.core.json.jackson.DatabindCodec.fromString(DatabindCodec.java:89)
+	at io.vertx.core.json.JsonArray.fromJson(JsonArray.java:712)
+	at io.vertx.core.json.JsonArray.<init>(JsonArray.java:55)
+	at com.motadata.server.ApiServer.lambda$start$15(ApiServer.java:482)
+	at io.vertx.ext.web.impl.RouteState.handleContext(RouteState.java:1285)
+	at io.vertx.ext.web.impl.RoutingContextImplBase.iterateNext(RoutingContextImplBase.java:177)
+	at io.vertx.ext.web.impl.RoutingContextImpl.next(RoutingContextImpl.java:137)
+	at io.vertx.ext.web.impl.RouterImpl.handle(RouterImpl.java:68)
+	at io.vertx.ext.web.impl.RouterImpl.handle(RouterImpl.java:37)
+	at io.vertx.core.http.impl.Http1xServerRequestHandler.handle(Http1xServerRequestHandler.java:67)
+	at io.vertx.core.http.impl.Http1xServerRequestHandler.handle(Http1xServerRequestHandler.java:30)
+	at io.vertx.core.impl.ContextImpl.emit(ContextImpl.java:328)
+	at io.vertx.core.impl.DuplicatedContext.emit(DuplicatedContext.java:166)
+	at io.vertx.core.http.impl.Http1xServerConnection.handleMessage(Http1xServerConnection.java:174)
+	at io.vertx.core.net.impl.ConnectionBase.read(ConnectionBase.java:159)
+	at io.vertx.core.net.impl.VertxHandler.channelRead(VertxHandler.java:153)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelRead(ChannelInboundHandlerAdapter.java:93)
+	at io.netty.handler.codec.http.websocketx.extensions.WebSocketServerExtensionHandler.onHttpRequestChannelRead(WebSocketServerExtensionHandler.java:160)
+	at io.netty.handler.codec.http.websocketx.extensions.WebSocketServerExtensionHandler.channelRead(WebSocketServerExtensionHandler.java:83)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: com.fasterxml.jackson.databind.exc.MismatchedInputException: No content to map due to end-of-input
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1]
+	at com.fasterxml.jackson.databind.exc.MismatchedInputException.from(MismatchedInputException.java:59)
+	at com.fasterxml.jackson.databind.ObjectMapper._initForReading(ObjectMapper.java:4765)
+	at com.fasterxml.jackson.databind.ObjectMapper._readValue(ObjectMapper.java:4642)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2831)
+	at io.vertx.core.json.jackson.DatabindCodec.fromParser(DatabindCodec.java:125)
+	... 43 common frames omitted
+[2024-05-17 12:51:14.231] [vert.x-eventloop-thread-0] [INFO ] [ApiServer.java:514] Server started on port 8080
+[2024-05-17 12:51:21.027] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:67] Received request: /credential-profile/
+[2024-05-17 12:51:26.465] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:225] Received request: /discovery-profile/
+[2024-05-17 12:51:31.565] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:435] Received request: /run-discovery/1
+[2024-05-17 12:51:31.600] [vert.x-eventloop-thread-0] [INFO ] [ApiServer.java:454] PING Check Successful 172.16.8.2 is alive.
+[2024-05-17 12:51:31.608] [vert.x-eventloop-thread-0] [ERROR] [ApiServer.java:503] Error during discovery process:
+io.vertx.core.json.DecodeException: Failed to decode:Unrecognized token 'W3siY3JlZGVudGlhbC5wcm9maWxlIjpbeyJjb21tdW5pdHkiOiJwdWJsaWMiLCJjcmVkZW50aWFsLm5hbWUiOiJTd2l0Y2ggczEiLCJjcmVkZW50aWFsLnByb2ZpbGUuaWQiOjEsInByb3RvY29sIjoic25tcCIsInZlcnNpb24iOiIyYyJ9XSwiZXJyb3IiOiJbXSIsImlwIjoiMTcyLjE2LjguMiIsIm5hbWUiOiJTd2l0Y2ggczEiLCJwbHVn...': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 257]
+	at io.vertx.core.json.jackson.DatabindCodec.fromParser(DatabindCodec.java:128)
+	at io.vertx.core.json.jackson.DatabindCodec.fromString(DatabindCodec.java:89)
+	at io.vertx.core.json.JsonArray.fromJson(JsonArray.java:712)
+	at io.vertx.core.json.JsonArray.<init>(JsonArray.java:55)
+	at com.motadata.server.ApiServer.lambda$start$15(ApiServer.java:484)
+	at io.vertx.ext.web.impl.RouteState.handleContext(RouteState.java:1285)
+	at io.vertx.ext.web.impl.RoutingContextImplBase.iterateNext(RoutingContextImplBase.java:177)
+	at io.vertx.ext.web.impl.RoutingContextImpl.next(RoutingContextImpl.java:137)
+	at io.vertx.ext.web.impl.RouterImpl.handle(RouterImpl.java:68)
+	at io.vertx.ext.web.impl.RouterImpl.handle(RouterImpl.java:37)
+	at io.vertx.core.http.impl.Http1xServerRequestHandler.handle(Http1xServerRequestHandler.java:67)
+	at io.vertx.core.http.impl.Http1xServerRequestHandler.handle(Http1xServerRequestHandler.java:30)
+	at io.vertx.core.impl.ContextImpl.emit(ContextImpl.java:328)
+	at io.vertx.core.impl.DuplicatedContext.emit(DuplicatedContext.java:166)
+	at io.vertx.core.http.impl.Http1xServerConnection.handleMessage(Http1xServerConnection.java:174)
+	at io.vertx.core.net.impl.ConnectionBase.read(ConnectionBase.java:159)
+	at io.vertx.core.net.impl.VertxHandler.channelRead(VertxHandler.java:153)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelRead(ChannelInboundHandlerAdapter.java:93)
+	at io.netty.handler.codec.http.websocketx.extensions.WebSocketServerExtensionHandler.onHttpRequestChannelRead(WebSocketServerExtensionHandler.java:160)
+	at io.netty.handler.codec.http.websocketx.extensions.WebSocketServerExtensionHandler.channelRead(WebSocketServerExtensionHandler.java:83)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: com.fasterxml.jackson.core.JsonParseException: Unrecognized token 'W3siY3JlZGVudGlhbC5wcm9maWxlIjpbeyJjb21tdW5pdHkiOiJwdWJsaWMiLCJjcmVkZW50aWFsLm5hbWUiOiJTd2l0Y2ggczEiLCJjcmVkZW50aWFsLnByb2ZpbGUuaWQiOjEsInByb3RvY29sIjoic25tcCIsInZlcnNpb24iOiIyYyJ9XSwiZXJyb3IiOiJbXSIsImlwIjoiMTcyLjE2LjguMiIsIm5hbWUiOiJTd2l0Y2ggczEiLCJwbHVn...': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 257]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:2481)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:762)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._reportInvalidToken(ReaderBasedJsonParser.java:3042)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._handleOddValue(ReaderBasedJsonParser.java:2085)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser.nextToken(ReaderBasedJsonParser.java:812)
+	at com.fasterxml.jackson.databind.ObjectMapper._initForReading(ObjectMapper.java:4761)
+	at com.fasterxml.jackson.databind.ObjectMapper._readValue(ObjectMapper.java:4642)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2831)
+	at io.vertx.core.json.jackson.DatabindCodec.fromParser(DatabindCodec.java:125)
+	... 43 common frames omitted
+[2024-05-17 12:56:05.279] [vert.x-eventloop-thread-0] [INFO ] [ApiServer.java:516] Server started on port 8080
+[2024-05-17 12:56:10.947] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:67] Received request: /credential-profile/
+[2024-05-17 12:56:14.876] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:225] Received request: /discovery-profile/
+[2024-05-17 12:56:18.500] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:282] Received request: /discovery-profile/
+[2024-05-17 12:56:22.371] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:435] Received request: /run-discovery/1
+[2024-05-17 12:56:22.377] [vert.x-eventloop-thread-0] [INFO ] [ApiServer.java:454] PING Check Successful 172.16.8.2 is alive.
+[2024-05-17 12:56:22.385] [vert.x-eventloop-thread-0] [ERROR] [ApiServer.java:505] Error during discovery process:
+io.vertx.core.json.DecodeException: Failed to decode:Unrecognized token 'B': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 3]
+	at io.vertx.core.json.jackson.DatabindCodec.fromParser(DatabindCodec.java:128)
+	at io.vertx.core.json.jackson.DatabindCodec.fromString(DatabindCodec.java:89)
+	at io.vertx.core.json.JsonArray.fromJson(JsonArray.java:712)
+	at io.vertx.core.json.JsonArray.<init>(JsonArray.java:55)
+	at com.motadata.server.ApiServer.lambda$start$15(ApiServer.java:486)
+	at io.vertx.ext.web.impl.RouteState.handleContext(RouteState.java:1285)
+	at io.vertx.ext.web.impl.RoutingContextImplBase.iterateNext(RoutingContextImplBase.java:177)
+	at io.vertx.ext.web.impl.RoutingContextImpl.next(RoutingContextImpl.java:137)
+	at io.vertx.ext.web.impl.RouterImpl.handle(RouterImpl.java:68)
+	at io.vertx.ext.web.impl.RouterImpl.handle(RouterImpl.java:37)
+	at io.vertx.core.http.impl.Http1xServerRequestHandler.handle(Http1xServerRequestHandler.java:67)
+	at io.vertx.core.http.impl.Http1xServerRequestHandler.handle(Http1xServerRequestHandler.java:30)
+	at io.vertx.core.impl.ContextImpl.emit(ContextImpl.java:328)
+	at io.vertx.core.impl.DuplicatedContext.emit(DuplicatedContext.java:166)
+	at io.vertx.core.http.impl.Http1xServerConnection.handleMessage(Http1xServerConnection.java:174)
+	at io.vertx.core.net.impl.ConnectionBase.read(ConnectionBase.java:159)
+	at io.vertx.core.net.impl.VertxHandler.channelRead(VertxHandler.java:153)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelRead(ChannelInboundHandlerAdapter.java:93)
+	at io.netty.handler.codec.http.websocketx.extensions.WebSocketServerExtensionHandler.onHttpRequestChannelRead(WebSocketServerExtensionHandler.java:160)
+	at io.netty.handler.codec.http.websocketx.extensions.WebSocketServerExtensionHandler.channelRead(WebSocketServerExtensionHandler.java:83)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: com.fasterxml.jackson.core.JsonParseException: Unrecognized token 'B': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 3]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:2481)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:762)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._reportInvalidToken(ReaderBasedJsonParser.java:3042)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._handleOddValue(ReaderBasedJsonParser.java:2085)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser.nextToken(ReaderBasedJsonParser.java:812)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeFromArray(CollectionDeserializer.java:346)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:244)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:28)
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323)
+	at com.fasterxml.jackson.databind.ObjectMapper._readValue(ObjectMapper.java:4650)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2831)
+	at io.vertx.core.json.jackson.DatabindCodec.fromParser(DatabindCodec.java:125)
+	... 43 common frames omitted
+[2024-05-17 12:57:25.266] [vert.x-eventloop-thread-0] [INFO ] [ApiServer.java:518] Server started on port 8080
+[2024-05-17 12:57:31.393] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:67] Received request: /credential-profile/
+[2024-05-17 12:57:34.271] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:225] Received request: /discovery-profile/
+[2024-05-17 12:57:37.441] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:435] Received request: /run-discovery/1
+[2024-05-17 12:57:37.458] [vert.x-eventloop-thread-0] [INFO ] [ApiServer.java:454] PING Check Successful 172.16.8.2 is alive.
+[2024-05-17 12:57:37.466] [vert.x-eventloop-thread-0] [ERROR] [ApiServer.java:507] Error during discovery process:
+io.vertx.core.json.DecodeException: Failed to decode:Unrecognized token 'B': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 3]
+	at io.vertx.core.json.jackson.DatabindCodec.fromParser(DatabindCodec.java:128)
+	at io.vertx.core.json.jackson.DatabindCodec.fromString(DatabindCodec.java:89)
+	at io.vertx.core.json.JsonArray.fromJson(JsonArray.java:712)
+	at io.vertx.core.json.JsonArray.<init>(JsonArray.java:55)
+	at com.motadata.server.ApiServer.lambda$start$15(ApiServer.java:488)
+	at io.vertx.ext.web.impl.RouteState.handleContext(RouteState.java:1285)
+	at io.vertx.ext.web.impl.RoutingContextImplBase.iterateNext(RoutingContextImplBase.java:177)
+	at io.vertx.ext.web.impl.RoutingContextImpl.next(RoutingContextImpl.java:137)
+	at io.vertx.ext.web.impl.RouterImpl.handle(RouterImpl.java:68)
+	at io.vertx.ext.web.impl.RouterImpl.handle(RouterImpl.java:37)
+	at io.vertx.core.http.impl.Http1xServerRequestHandler.handle(Http1xServerRequestHandler.java:67)
+	at io.vertx.core.http.impl.Http1xServerRequestHandler.handle(Http1xServerRequestHandler.java:30)
+	at io.vertx.core.impl.ContextImpl.emit(ContextImpl.java:328)
+	at io.vertx.core.impl.DuplicatedContext.emit(DuplicatedContext.java:166)
+	at io.vertx.core.http.impl.Http1xServerConnection.handleMessage(Http1xServerConnection.java:174)
+	at io.vertx.core.net.impl.ConnectionBase.read(ConnectionBase.java:159)
+	at io.vertx.core.net.impl.VertxHandler.channelRead(VertxHandler.java:153)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelRead(ChannelInboundHandlerAdapter.java:93)
+	at io.netty.handler.codec.http.websocketx.extensions.WebSocketServerExtensionHandler.onHttpRequestChannelRead(WebSocketServerExtensionHandler.java:160)
+	at io.netty.handler.codec.http.websocketx.extensions.WebSocketServerExtensionHandler.channelRead(WebSocketServerExtensionHandler.java:83)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: com.fasterxml.jackson.core.JsonParseException: Unrecognized token 'B': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 3]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:2481)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:762)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._reportInvalidToken(ReaderBasedJsonParser.java:3042)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._handleOddValue(ReaderBasedJsonParser.java:2085)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser.nextToken(ReaderBasedJsonParser.java:812)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeFromArray(CollectionDeserializer.java:346)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:244)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:28)
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323)
+	at com.fasterxml.jackson.databind.ObjectMapper._readValue(ObjectMapper.java:4650)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2831)
+	at io.vertx.core.json.jackson.DatabindCodec.fromParser(DatabindCodec.java:125)
+	... 43 common frames omitted
+[2024-05-17 13:01:18.784] [vert.x-eventloop-thread-0] [INFO ] [ApiServer.java:521] Server started on port 8080
+[2024-05-17 13:01:26.369] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:67] Received request: /credential-profile/
+[2024-05-17 13:01:32.952] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:225] Received request: /discovery-profile/
+[2024-05-17 13:01:37.130] [vert.x-eventloop-thread-0] [DEBUG] [ApiServer.java:435] Received request: /run-discovery/1
+[2024-05-17 13:01:37.157] [vert.x-eventloop-thread-0] [INFO ] [ApiServer.java:454] PING Check Successful 172.16.8.2 is alive.
